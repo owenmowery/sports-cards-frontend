@@ -7,9 +7,10 @@ class API {
         .then(resp => resp.json())
         .then(data => {
             data.forEach(card => {
-                const{id, player_name, player_team, league, position, card_value, card_img} = card
-                new Card(id, player_name, player_team, league, position, card_value, card_img)
-            })
-        }
+                //console.log(card);
+                const{id, player_name, player_team, league, position, card_value, card_img, admin_id} = card
+                new Card(id, player_name, player_team, league, position, card_value, card_img, admin_id)
+            });
+        })
     }
 }
