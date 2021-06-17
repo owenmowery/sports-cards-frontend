@@ -37,7 +37,7 @@ class Card {
         <h3>${this.player_name}</h3>
         <h4>${this.player_team}</h4>
         <p>${this.position}</p>
-        <p>Card Value: ${this.card_value}</p>
+        <p>Card Value: <strong>${this.card_value}</strong></p>
         `
     }
 }
