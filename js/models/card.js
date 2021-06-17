@@ -28,7 +28,6 @@ class Card {
         cardContainer.setAttribute("class", "sports-card")
         cardContainer.innerHTML += this.showHTML()
         cardHolder.appendChild(cardContainer)
-        console.log(cardContainer)
     }
 
     showHTML() {

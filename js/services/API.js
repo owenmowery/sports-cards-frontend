@@ -13,4 +13,16 @@ class API {
             });
         })
     }
+
+    static grabAdmin() {
+        fetch("http://localhost:3000/admins")
+        .then(resp => resp.json())
+        .then(data => {
+            data.forEach(admin => {
+                //console.log(admin)
+                const{id, name, email, password_digest} = admin
+                new Admin(id, name, email, password_digest)
+            });
+        })
+    }
 }
