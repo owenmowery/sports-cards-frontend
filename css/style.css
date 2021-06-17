@@ -79,3 +79,24 @@ header {
     width: 200px;
     height: auto;
 }
+
+.sports-card {
+    padding: 25px;
+    display: inline-block;
+}
+
+.sports-card h3 {
+    text-transform: none;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.sports-card h4 {
+    font-weight: 350;
+    padding-top: 5px;
+}
+
+.sports-card p {
+    font-weight: 350;
+    padding-top: 5px;
+}
