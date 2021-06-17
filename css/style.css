@@ -60,6 +60,10 @@ header {
     height: 80vh;
 }
 
+/* ---------------------------- */
+/* Header */
+/* ---------------------------- */
+
 .title-header {
     text-align: center;
     margin-top: 80px;
@@ -83,6 +87,81 @@ header {
     width: 200px;
     height: auto;
 }
+
+/* ---------------------------- */
+/* ADD CARD FORM */
+/* ---------------------------- */
+
+.container {
+    margin-left: 10%;
+    padding: 1rem;
+    width: 80%;
+    height: auto;
+    display: none;
+    background: #ffa502;
+    opacity: .8;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.add-card-form {
+   width: 80%;
+   text-align: center;
+   display: inline-block;
+}
+
+.add-card-form label {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.input-text {
+    border-radius: 5px;
+    height: 2rem;
+    width: 60%;
+    font-size: 18px;
+    margin: 3px;
+}
+
+.submit {
+    padding: 10px;
+    background-color: #2b30ab;
+    border-radius: 5px;
+    height: 2rem;
+    width: max-content;
+    color: whitesmoke;
+    font-size: 18px;
+    justify-self: left;
+    margin: 3px;
+}
+  
+.submit:hover {
+    background-color: whitesmoke;
+    border: #2b30ab solid 1px;
+    color: #2b30ab;
+}
+
+#admin-btn {
+    position: relative;
+    padding: 10px;
+    background-color: #2b30ab;
+    border: none;
+    border-radius: 5px;
+    height: 3rem;
+    width: max-content;
+    color: whitesmoke;
+    font-size: 20px;
+    justify-self: center;
+}
+  
+  #admin-btn:hover {
+    background-color: whitesmoke;
+    border: #2b30ab solid 1px;
+    color: #2b30ab;
+}
+/* ---------------------------- */
+/* CARD DIVS */
+/* ---------------------------- */
 
 .sports-card {
     margin: 50px;
