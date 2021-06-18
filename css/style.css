@@ -97,11 +97,14 @@ header {
     padding: 1rem;
     width: 80%;
     height: auto;
-    display: none;
     background: #ffa502;
     opacity: .8;
     border-radius: 10px;
     text-align: center;
+}
+
+#add-card-container {
+    display: none;
 }
 
 .add-card-form {
@@ -123,6 +126,20 @@ header {
     margin: 3px;
 }
 
+.admin-login-form {
+    width: 80%;
+    text-align: center;
+    display: inline-block;
+}
+
+.login-label {
+    margin-top: 10px;
+}
+
+#admin-login-container {
+    display: none;
+}
+
 .submit {
     padding: 10px;
     background-color: #2b30ab;
@@ -140,6 +157,9 @@ header {
     border: #2b30ab solid 1px;
     color: #2b30ab;
 }
+/* ---------------------------- */
+/* ADMIN LOGIN ELEMENTS */
+/* ---------------------------- */
 
 #admin-btn {
     position: relative;

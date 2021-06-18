@@ -24,11 +24,40 @@
         </header>
         <section>
             <div class="row">
-                <h4>Are you an admin?</h4>
-                <button id="admin-btn">Admin Log In</button>
+                <div class="col span-1-of-3">
+                    <h4>Are you an admin?</h4>
+                    <button id="admin-btn">Admin Log In</button>
+                </div>
+                <div class="col span-1-of-3 container" id="admin-login-container">
+                    <form class="admin-login-form">
+                        <label class="login-label">Email:</label>
+                        <input 
+                        type="text" 
+                        name="email" 
+                        value="" 
+                        placeholder="Enter admin email..." 
+                        class="input-text">
+                        <br>
+
+                        <label class="login-label">Password:</label>
+                        <input 
+                        type="text" 
+                        name="password_digest" 
+                        value="" 
+                        placeholder="Enter password..." 
+                        class="input-text">
+                        <br>
+
+                        <input
+                        type="submit"
+                        name="submit"
+                        value="Create Card"
+                        class="submit admin-login-submit">
+                    </form>
+                </div>
             </div>
             <br>
-            <div class="container">
+            <div class="container" id="add-card-container">
                 <form class="add-card-form">
                     <label>Player Name: </label>
                     <input 
@@ -88,7 +117,7 @@
                     type="submit"
                     name="submit"
                     value="Create Card"
-                    class="submit">
+                    class="submit new-card-submit">
                 </form>
             </div>
             <div id="card-collection"></div>
