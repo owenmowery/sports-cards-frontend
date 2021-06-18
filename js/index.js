@@ -6,4 +6,12 @@ document.addEventListener("DOMContentLoaded", function() {
     API.grabAdmin()
     // if we have any event listeners that need to get appended to the page when it loads, 
     // they should get appended here too.
+
+    document.addEventListener("click", function() {
+        const adminBtn = document.getElementById("admin-btn")
+        if (event.target === adminBtn) {
+            const adminForm = document.getElementById("admin-login-container");
+            adminForm.style.display = "block";
+        };
+    });
 });
