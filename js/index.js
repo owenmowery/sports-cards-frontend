@@ -8,10 +8,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // they should get appended here too.
 
     document.addEventListener("click", function() {
-        const adminBtn = document.getElementById("admin-btn")
+        const adminBtn = document.getElementById("admin-btn");
+        const adminForm = document.getElementById("admin-login-container");
         if (event.target === adminBtn) {
-            const adminForm = document.getElementById("admin-login-container");
-            adminForm.style.display = "block";
+            if (adminForm.style.display === 'none') {
+                adminForm.style.display = "block";
+            }
+            else {
+                adminForm.style.display = 'none';
+            };
+            
         };
     });
 });
