@@ -45,4 +45,12 @@ document.addEventListener("DOMContentLoaded", function() {
             Admin.authenticateAdmin(event);
         };
     });
+
+    //click event to add card 
+    document.addEventListener("click", function() {
+        const submitBtn = document.getElementById('submit-btn');
+        if (event.target === submitBtn) {
+            Card.addCard(event);
+        }
+    })
 });

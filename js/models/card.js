@@ -30,6 +30,10 @@ class Card {
         cardHolder.appendChild(cardContainer)
     }
 
+    static addCard(event) {
+        console.log(event);
+    }
+
     showHTML() {
         return ` 
         <img src=${this.card_img} alt="sports card image">
