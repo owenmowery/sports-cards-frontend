@@ -9,7 +9,7 @@ class Card {
         this.card_img = card_img;
         //this.admin_id = admin_id;
 
-        console.log(this);
+        //console.log(this);
 
         //render the instance to the page using renderCards function
         this.renderCard()

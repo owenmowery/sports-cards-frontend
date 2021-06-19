@@ -5,7 +5,11 @@ class Admin {
         this.email = email;
         this.password_digest = password_digest;
 
-        console.log(this)
+        //console.log(this)
         //renderEdit and renderNew methods for authenticating the admin and 
+    }
+
+    static authenticateAdmin(event) {
+        console.log(event)
     }
 }

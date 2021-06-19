@@ -24,9 +24,9 @@
         </header>
         <section>
             <div class="row">
-                <div class="col span-1-of-3">
-                    <h4>Are you an admin?</h4>
-                    <button id="admin-btn">Admin Log In</button>
+                <div id="admin-login-div" class="col span-1-of-3">
+                    <h4>Log In to add new card</h4>
+                    <button class="btn" id="admin-btn">Admin Log In</button>
                 </div>
                 <div class="col span-1-of-3 container" id="admin-login-container">
                     <form class="admin-login-form">
@@ -41,7 +41,7 @@
 
                         <label class="login-label">Password:</label>
                         <input 
-                        type="text" 
+                        type="password" 
                         name="password_digest" 
                         value="" 
                         placeholder="Enter password..." 
@@ -51,74 +51,80 @@
                         <input
                         type="submit"
                         name="submit"
-                        value="Create Card"
+                        value="Log In"
+                        id="admin-login-submit"
                         class="submit admin-login-submit">
                     </form>
                 </div>
             </div>
             <br>
-            <div class="container" id="add-card-container">
-                <form class="add-card-form">
-                    <label>Player Name: </label>
-                    <input 
-                    type="text"
-                    name="player_name"
-                    value=""
-                    placeholder="Enter the players name..."
-                    class="input-text"/>
-                    <br>
-
-                    <label>Player Team: </label>
-                    <input 
-                    type="text"
-                    name="player_team"
-                    value=""
-                    placeholder="Enter the players team..."
-                    class="input-text"/>
-                    <br>
-
-                    <label>League: </label>
-                    <input 
-                    type="text"
-                    name="league"
-                    value=""
-                    placeholder="Enter the players league..."
-                    class="input-text"/>
-                    <br>
-
-                    <label>Position: </label>
-                    <input 
-                    type="text"
-                    name="position"
-                    value=""
-                    placeholder="Enter the players position..."
-                    class="input-text"/>
-                    <br>
-
-                    <label>Card Value: </label>
-                    <input 
-                    type="text"
-                    name="card_value"
-                    value=""
-                    placeholder="Enter the card value..."
-                    class="input-text"/>
-                    <br>
-
-                    <label>Image Link: </label>
-                    <input 
-                    type="text"
-                    name="card_img"
-                    value=""
-                    placeholder="Enter the link to the card image..."
-                    class="input-text"/>
-                    <br>
-
-                    <input
-                    type="submit"
-                    name="submit"
-                    value="Create Card"
-                    class="submit new-card-submit">
-                </form>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <button class="btn" id="create-btn">Add New Card</button>
+                </div>
+                <div class="col span-1-of-2 container" id="add-card-container">
+                    <form class="add-card-form">
+                        <label>Player Name: </label>
+                        <input 
+                        type="text"
+                        name="player_name"
+                        value=""
+                        placeholder="Enter the players name..."
+                        class="input-text"/>
+                        <br>
+    
+                        <label>Player Team: </label>
+                        <input 
+                        type="text"
+                        name="player_team"
+                        value=""
+                        placeholder="Enter the players team..."
+                        class="input-text"/>
+                        <br>
+    
+                        <label>League: </label>
+                        <input 
+                        type="text"
+                        name="league"
+                        value=""
+                        placeholder="Enter the players league..."
+                        class="input-text"/>
+                        <br>
+    
+                        <label>Position: </label>
+                        <input 
+                        type="text"
+                        name="position"
+                        value=""
+                        placeholder="Enter the players position..."
+                        class="input-text"/>
+                        <br>
+    
+                        <label>Card Value: </label>
+                        <input 
+                        type="text"
+                        name="card_value"
+                        value=""
+                        placeholder="Enter the card value..."
+                        class="input-text"/>
+                        <br>
+    
+                        <label>Image Link: </label>
+                        <input 
+                        type="text"
+                        name="card_img"
+                        value=""
+                        placeholder="Enter the link to the card image..."
+                        class="input-text"/>
+                        <br>
+    
+                        <input
+                        type="submit"
+                        name="submit"
+                        value="Create Card"
+                        class="submit new-card-submit">
+                    </form>
+                </div>
             </div>
             <div id="card-collection"></div>
         </section>
