@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // get fetch request to our back end to load in card, this will live in the API class
     API.addCards()
     API.grabAdmin()
+    Card.createCard()
+    //Card.deleteCard()
     // if we have any event listeners that need to get appended to the page when it loads, 
     // they should get appended here too.
 
@@ -21,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
         };
     });
+
 
     //add new card button event listener that displays new card form 
     document.addEventListener("click", function() {
@@ -46,11 +49,5 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     });
 
-    //click event to add card 
-    document.addEventListener("click", function() {
-        const submitBtn = document.getElementById('submit-btn');
-        if (event.target === submitBtn) {
-            Card.addCard(event);
-        }
-    })
+
 });

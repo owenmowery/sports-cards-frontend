@@ -30,8 +30,50 @@ class Card {
         cardHolder.appendChild(cardContainer)
     }
 
-    static addCard(event) {
-        console.log(event);
+    static createCard() {
+
+        const submitBtn = document.getElementById('submit-btn');
+
+        submitBtn.addEventListener("click", e => { console.log(e)
+            e.preventDefault()
+            {
+                const newName = document.getElementById('card-name')
+                const newTeam = document.getElementById('card-team')
+                const newLeague = document.getElementById('card-league')
+                const newPosition = document.getElementById('card-position')
+                const newValue = document.getElementById('card-value')
+                const newImage = document.getElementById('card-img')
+
+                let json = JSON.stringify({
+                    "player_name": newName.value,
+                    "player_team": newTeam.value,
+                    "league": newLeague.value,
+                    "position": newPosition.value,
+                    "card_value": newValue.value,
+                    "card_img": newImage.value,
+                    "admin_id": 1
+                    // ask sam about not hard coding admin id
+                })
+
+                API.postNewCard(json)
+                newName.value=""
+                newTeam.value=""
+                newLeague.value=""
+                newPosition.value=""
+                newValue.value=""
+                newImage.value=""
+            }
+        })
+    }
+
+    static deleteCard() {
+        const deleteBtn = document.getElementById("delete")
+        deleteBtn.addEventListener('click', e => { 
+            e.preventDefault()
+            {
+            console.log(document.deleteBtn.parentElement.id)
+            }
+        })
     }
 
     showHTML() {
@@ -41,6 +83,7 @@ class Card {
         <h4>${this.player_team}</h4>
         <p>${this.position}</p>
         <p>Card Value: <strong>${this.card_value}</strong></p>
+        <button id="delete" class="delete-btn btn">Delete</button>
         `
     }
 }

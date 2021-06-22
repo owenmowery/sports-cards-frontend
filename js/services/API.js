@@ -25,4 +25,25 @@ class API {
             });
         })
     }
+
+    static postNewCard(json) {
+        fetch ( "http://localhost:3000/cards",{
+        method: "POST",
+        headers: { "Content-Type": "application/json"},
+        body: json
+        })
+        .then(response => response.json())
+        .then(newCard => {console.log(newCard);
+            const{id, player_name, player_team, league, position, card_value, card_img} = newCard
+            new Card(id, player_name, player_team, league, position, card_value, card_img)
+        });
+    }
+
+    static deleteCard(id) {
+        fetch (`http://localhost:3000/cards/${id}`, {
+            method: "DELETE",
+        })
+        .then(resp => resp.json())
+        .then(resp => console.log(resp))
+    }
 }
