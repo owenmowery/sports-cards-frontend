@@ -21,7 +21,8 @@ class API {
             data.forEach(admin => {
                 //console.log(admin)
                 const{id, name, email, password_digest} = admin
-                new Admin(id, name, email, password_digest)
+                let newAdmin = new Admin(id, name, email, password_digest)
+                Admin.all.push(newAdmin)
             });
         })
     }

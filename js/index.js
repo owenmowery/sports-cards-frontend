@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     API.addCards()
     API.grabAdmin()
     Card.createCard()
-    //Card.deleteCard()
+    Card.deleteCard()
     // if we have any event listeners that need to get appended to the page when it loads, 
     // they should get appended here too.
 
@@ -41,12 +41,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     //click event that handles admin login 
-    document.addEventListener("click", function() {
-        const adminLogInBtn = document.getElementById("admin-login-submit");
-        if (event.target === adminLogInBtn) {
-            console.log(event)
-            Admin.authenticateAdmin(event);
-        };
+    const loginForm = document.querySelector('.admin-login-form')
+    loginForm.addEventListener("submit", function() { event.preventDefault()
+        //const adminLogInBtn = document.getElementById("admin-login-submit");
+        let emailAdmin = event.target.email.value
+        let passwordAdmin = event.target.password_digest.value
+        console.log(emailAdmin)
     });
 
 

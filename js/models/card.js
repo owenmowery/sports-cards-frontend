@@ -28,6 +28,7 @@ class Card {
         cardContainer.setAttribute("class", "sports-card")
         cardContainer.innerHTML += this.showHTML()
         cardHolder.appendChild(cardContainer)
+    
     }
 
     static createCard() {
@@ -67,11 +68,9 @@ class Card {
     }
 
     static deleteCard() {
-        const deleteBtn = document.getElementById("delete")
-        deleteBtn.addEventListener('click', e => { 
-            e.preventDefault()
-            {
-            console.log(document.deleteBtn.parentElement.id)
+        document.addEventListener("click", e => {
+            if (e.target.className === "delete-btn") {
+                console.log('this was clicked');
             }
         })
     }
