@@ -11,7 +11,11 @@ class Admin {
     }
 
     static authenticateAdmin(email, password) {
-        console.log(email)
-        console.log(password)
+        Admin.all.forEach(admin => {
+            if (admin.email === email && admin.password_digest === password) {
+                console.log("You are an admin!")
+                //do any hidden button rendering here
+            };
+        })
     }
 }

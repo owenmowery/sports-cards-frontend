@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //const adminLogInBtn = document.getElementById("admin-login-submit");
         let emailAdmin = event.target.email.value
         let passwordAdmin = event.target.password_digest.value
-        console.log(emailAdmin)
+        Admin.authenticateAdmin(emailAdmin, passwordAdmin)
     });
 
 
