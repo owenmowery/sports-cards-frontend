@@ -108,6 +108,10 @@ header {
     display: none;
 }
 
+#create-btn {
+    display: none;
+}
+
 .add-card-form {
    width: 80%;
    text-align: center;
@@ -225,4 +229,8 @@ header {
 .sports-card p {
     font-weight: 350;
     padding-top: 10px;
+}
+
+.delete-btn {
+    display: none;
 }
