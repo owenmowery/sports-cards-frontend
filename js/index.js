@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     API.addCards()
     API.grabAdmin()
     Card.createCard()
-    Card.deleteCard()
+   
     // if we have any event listeners that need to get appended to the page when it loads, 
     // they should get appended here too.
 
@@ -47,7 +47,21 @@ document.addEventListener("DOMContentLoaded", function() {
         let emailAdmin = event.target.email.value
         let passwordAdmin = event.target.password_digest.value
         Admin.authenticateAdmin(emailAdmin, passwordAdmin)
+    })
+
+    const darkBtn = document.getElementById('dark-btn')
+    let dark = false
+    darkBtn.addEventListener('click', function() {
+        dark = !dark
+        if (dark === false) {
+            document.body.style.backgroundColor = 'white'
+        }
+        else {
+            document.body.style.backgroundColor = 'black'
+        }
     });
+
+    
 
 
 });

@@ -234,3 +234,8 @@ header {
 .delete-btn {
     display: none;
 }
+
+.dark-mode-btn {
+    color: white;
+    background-color: black;
+}

@@ -13,7 +13,6 @@ class Admin {
     static authenticateAdmin(email, password) {
         let addNewCardBtn = document.getElementById('create-btn')
         let deleteBtn = document.querySelectorAll('.delete-btn')
-        console.log(deleteBtn)
         Admin.all.forEach(admin => {
             if (admin.email === email && admin.password_digest === password) {
                 console.log("You are an admin!")
@@ -21,8 +20,13 @@ class Admin {
                 addNewCardBtn.style.display = 'block';
                 deleteBtn.forEach(btn => {
                     btn.style.display = 'block'
+                    btn.addEventListener('click', function() {
+                        console.log(btn.parentElement)
+                    })
                 });
             };
         })
     }
+
+
 }

@@ -66,15 +66,6 @@ class Card {
             }
         })
     }
-
-    static deleteCard() {
-        document.addEventListener("click", e => {
-            if (e.target.className === "delete-btn") {
-                console.log('this was clicked');
-            }
-        })
-    }
-
     showHTML() {
         return ` 
         <img src=${this.card_img} alt="sports card image">
